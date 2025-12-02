@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>互动化学元素周期表</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>互动化学元素周期表</h1>
+            <div class="controls">
+                <div class="property-selector">
+                    <label for="propertySelect">显示性质：</label>
+                    <select id="propertySelect" class="property-select">
+                        <option value="electronegativity" selected>电负性</option>
+                        <option value="electronAffinity">电子亲和能</option>
+                        <option value="ionizationEnergy">电离能</option>
+                        <option value="atomicRadius">原子半径</option>
+                        <option value="meltingPoint">熔点</option>
+                        <option value="stability">稳定性</option>
+                    </select>
+                </div>
+                <button id="toggleLanthanides" class="control-btn">显示镧系元素</button>
+                <button id="toggleActinides" class="control-btn">显示锕系元素</button>
+            </div>
+        </header>
+
+        <main>
+            <div id="periodicTable" class="periodic-table"></div>
+        </main>
+
+        <aside id="elementDetail" class="element-detail hidden">
+            <button class="close-btn" id="closeDetail">&times;</button>
+            <div id="detailContent"></div>
+        </aside>
+
+        <footer>
+            <div class="legend">
+                <h3>图例说明</h3>
+                <div class="legend-grid">
+                    <div class="legend-item">
+                        <h4>电负性</h4>
+                        <div class="legend-color-scale" id="electronegativityScale"></div>
+                        <span class="legend-range">低 (0.7) → 高 (4.0)</span>
+                    </div>
+                    <div class="legend-item">
+                        <h4>稳定性</h4>
+                        <div class="legend-color-scale" id="stabilityScale"></div>
+                        <span class="legend-range">不稳定 → 稳定</span>
+                    </div>
+                    <div class="legend-item">
+                        <h4>放射性</h4>
+                        <div class="legend-radioactive">
+                            <span class="radioactive-icon">☢</span>
+                            <span>放射性元素</span>
+                        </div>
+                    </div>
+                    <div class="legend-item">
+                        <h4>电离能 (kJ/mol)</h4>
+                        <div class="legend-color-scale" id="ionizationScale"></div>
+                        <span class="legend-range">低 (376) → 高 (2372)</span>
+                    </div>
+                    <div class="legend-item">
+                        <h4>原子半径 (pm)</h4>
+                        <div class="legend-color-scale" id="radiusScale"></div>
+                        <span class="legend-range">小 (31) → 大 (298)</span>
+                    </div>
+                    <div class="legend-item">
+                        <h4>电子亲和能 (kJ/mol)</h4>
+                        <div class="legend-color-scale" id="affinityScale"></div>
+                        <span class="legend-range">低 (-222) → 高 (349)</span>
+                    </div>
+                    <div class="legend-item">
+                        <h4>熔点 (°C)</h4>
+                        <div class="legend-color-scale" id="meltingPointScale"></div>
+                        <span class="legend-range">低 (-272) → 高 (3422)</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="elements-data-part1.js"></script>
+    <script src="elements-data-part2.js"></script>
+    <script src="elements-data-part3.js"></script>
+    <script src="elements-data-part4.js"></script>
+    <script src="elements-data-part5.js"></script>
+    <script src="elements-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
