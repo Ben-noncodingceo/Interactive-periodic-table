@@ -1,0 +1,4 @@
+# Cloudflare Pages 路由配置
+# 所有路由都重定向到 index.html（支持 SPA）
+/*    /index.html   200
+

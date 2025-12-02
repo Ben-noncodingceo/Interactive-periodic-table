@@ -38,7 +38,13 @@ CHEM-Periodic-table/
 ├── elements-data-part3.js  # 元素数据（49-72号元素，含镧系）
 ├── elements-data-part4.js  # 元素数据（73-96号元素，含锕系）
 ├── elements-data-part5.js  # 元素数据（97-118号元素）
-└── elements-data.js        # 合并后的元素数据
+├── elements-data.js        # 合并后的元素数据
+├── 404.html                # 404错误页面（GitHub Pages）
+├── .nojekyll               # 禁用Jekyll（GitHub Pages）
+├── _config.yml             # Jekyll配置（可选）
+├── _redirects              # Cloudflare Pages路由配置
+├── cloudflare-pages.json    # Cloudflare Pages配置
+└── DEPLOYMENT.md            # 详细部署说明
 ```
 
 ## 使用方法
@@ -47,10 +53,17 @@ CHEM-Periodic-table/
    - 直接在浏览器中打开 `index.html` 文件
    - 或使用本地服务器（如 `python -m http.server`）
 
-2. **部署到 Cloudflare Pages**：
-   - 将整个项目文件夹上传到 Cloudflare Pages
-   - 设置构建命令为空（纯静态文件）
-   - 设置输出目录为项目根目录
+2. **部署到 GitHub Pages**：
+   - 在仓库 Settings → Pages 中启用
+   - 选择 main 分支和 / (root) 目录
+   - 访问：`https://Ben-noncodingceo.github.io/Interactive-periodic-table`
+
+3. **部署到 Cloudflare Pages**：
+   - 连接 GitHub 仓库到 Cloudflare Pages
+   - 构建命令留空，输出目录设为 `/`
+   - 详细步骤请查看 [DEPLOYMENT.md](./DEPLOYMENT.md)
+
+**注意**：项目已配置为同时支持两个平台，推送代码到 GitHub 后会自动部署。
 
 ## 交互说明
 

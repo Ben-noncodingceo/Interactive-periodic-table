@@ -1,0 +1,13 @@
+# GitHub Pages Jekyll 配置（如果使用 Jekyll）
+# 如果不需要 Jekyll，可以设置为 false
+theme: jekyll-theme-minimal
+plugins:
+  - jekyll-feed
+
+# 如果不想使用 Jekyll，取消下面的注释
+# exclude:
+#   - README.md
+#   - LICENSE
+#   - .gitignore
+#   - PUSH_TO_GITHUB.md
+

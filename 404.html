@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面未找到 - 互动化学元素周期表</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // GitHub Pages 404 重定向到首页
+        sessionStorage.redirect = location.href;
+        location.replace(location.pathname.split('/').slice(0, -1).join('/') + '/');
+    </script>
+</head>
+<body>
+    <div class="container" style="text-align: center; padding: 100px 20px;">
+        <h1>404 - 页面未找到</h1>
+        <p>正在跳转到首页...</p>
+        <p><a href="/" style="color: #667eea; text-decoration: underline;">如果未自动跳转，请点击这里</a></p>
+    </div>
+</body>
+</html>
+
